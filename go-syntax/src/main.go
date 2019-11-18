@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	terraformExercise()
+	capstone.AppendString("test", 20)
 }
 
 func terraformExercise() {
