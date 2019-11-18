@@ -4,11 +4,23 @@ import (
 	"capstone"
 	"chess"
 	"fmt"
+	"time"
 )
 
 func main() {
-	wordsExercise()
+	lifeExercise()
 
+}
+
+func lifeExercise() {
+	a, b := capstone.NewUniverse(), capstone.NewUniverse()
+	a.Seed()
+	for i := 0; i < 300; i++ {
+		capstone.Step(a, b)
+		a.Show()
+		time.Sleep(time.Second / 30)
+		a, b = b, a
+	}
 }
 
 func wordsExercise() {
