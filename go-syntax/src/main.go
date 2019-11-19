@@ -8,7 +8,16 @@ import (
 )
 
 func main() {
-	classesExercise()
+
+	embeddingExercise()
+}
+
+func embeddingExercise() {
+	c := capstone.Car{
+		Name:   "BMW",
+		Engine: capstone.Engine{Capacity: 1.6},
+	}
+	c.Start()
 }
 
 func classesExercise() {
