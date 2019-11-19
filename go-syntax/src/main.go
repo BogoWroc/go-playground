@@ -8,8 +8,11 @@ import (
 )
 
 func main() {
-	lifeExercise()
+	landingExercise()
+}
 
+func landingExercise() {
+	capstone.PrintLandingSites()
 }
 
 func lifeExercise() {
