@@ -8,7 +8,18 @@ import (
 )
 
 func main() {
-	landingExercise()
+	classesExercise()
+}
+
+func classesExercise() {
+	spirit := capstone.NewLocation(capstone.Coordinate{14, 34, 6.2, 'S'}, capstone.Coordinate{175, 28, 21.5, 'E'})
+	opportunity := capstone.NewLocation(capstone.Coordinate{1, 56, 46.3, 'S'}, capstone.Coordinate{354, 28, 24.2, 'E'})
+	curiosity := capstone.NewLocation(capstone.Coordinate{4, 35, 22.2, 'S'}, capstone.Coordinate{137, 26, 30.12, 'E'})
+	insight := capstone.NewLocation(capstone.Coordinate{4, 30, 0.0, 'N'}, capstone.Coordinate{135, 54, 0, 'E'})
+	fmt.Println("Spirit", spirit)
+	fmt.Println("Opportunity", opportunity)
+	fmt.Println("Curiosity", curiosity)
+	fmt.Println("InSight", insight)
 }
 
 func landingExercise() {
