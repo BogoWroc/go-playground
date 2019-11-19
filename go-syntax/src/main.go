@@ -9,7 +9,8 @@ import (
 
 func main() {
 
-	embeddingExercise()
+	r := capstone.Rover{}
+	r.Main()
 }
 
 func embeddingExercise() {
