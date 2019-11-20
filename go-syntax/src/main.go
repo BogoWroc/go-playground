@@ -3,13 +3,17 @@ package main
 import (
 	"capstone"
 	"chess"
+	"cmdline"
 	"fmt"
 	"time"
 )
 
 func main() {
+	cmdlineArgsExercise()
+}
 
-	capstone.AnimalsApp{}.Main()
+func cmdlineArgsExercise() {
+	cmdline.PrintArgs()
 }
 
 func embeddingExercise() {
