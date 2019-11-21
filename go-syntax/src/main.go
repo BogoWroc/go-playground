@@ -9,7 +9,20 @@ import (
 )
 
 func main() {
-	turtleExercise()
+	knightsExercise()
+}
+
+func knightsExercise() {
+	arthur := &capstone.Character{Name: "Arthur"}
+	shrubbery := &capstone.Item{Name: "shrubbery"}
+	arthur.Pickup(shrubbery)
+
+	knight := &capstone.Character{Name: "Knight"}
+	arthur.Give(knight)
+
+	fmt.Println(arthur)
+
+	fmt.Println(knight)
 }
 
 func turtleExercise() {
