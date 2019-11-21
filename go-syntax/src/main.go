@@ -9,7 +9,14 @@ import (
 )
 
 func main() {
-	cmdlineArgsExercise()
+	turtleExercise()
+}
+
+func turtleExercise() {
+	t := capstone.Turtle{}
+	t.Up()
+	t.Left()
+	fmt.Println(t)
 }
 
 func cmdlineArgsExercise() {
