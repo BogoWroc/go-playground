@@ -15,6 +15,11 @@ func main() {
 	f, ok := i.(float64)
 	fmt.Println(f, ok)
 
+	switch i.(type) {
+	case string:
+		fmt.Printf("string type")
+	}
+
 	f = i.(float64) // panic
 	fmt.Println(f)
 }
