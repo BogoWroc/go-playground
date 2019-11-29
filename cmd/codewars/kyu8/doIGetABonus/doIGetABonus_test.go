@@ -1,6 +1,7 @@
-package main
+package main_test
 
 import (
+	. "github.com/bogowroc/go-playground/cmd/codewars/kyu8/doIGetABonus"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )
