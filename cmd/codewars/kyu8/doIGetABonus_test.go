@@ -1,7 +1,7 @@
-package main_test
+package kyu8_test
 
 import (
-	. "github.com/bogowroc/go-playground/cmd/codewars/kyu8/doIGetABonus"
+	. "github.com/bogowroc/go-playground/cmd/codewars/kyu8"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )

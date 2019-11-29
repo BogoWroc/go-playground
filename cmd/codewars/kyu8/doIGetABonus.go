@@ -1,4 +1,4 @@
-package main
+package kyu8
 
 import (
 	"fmt"
