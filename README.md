@@ -7,6 +7,7 @@ Tips & Tricks
 	https://peter.bourgon.org/go-best-practices-2016/#repository-structure
 	https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1
 	https://yourbasic.org/golang/
+	https://www.ardanlabs.com/all-posts/
 
 Effective go
 ============
