@@ -17,6 +17,14 @@ FAQ
 ===
 	https://golang.org/doc/faq
 
+PROJECT TEMPLATE
+================
+    https://github.com/ardanlabs/service
+    
+Packaging
+=========
+    https://github.com/ardanlabs/gotraining/tree/master/topics/go/design/packaging
+
 Testing and Mocking
 ===================
 	https://blog.codecentric.de/2019/07/gomock-vs-testify/
