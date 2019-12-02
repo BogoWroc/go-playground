@@ -43,7 +43,11 @@ Error handling
 Examples
 ========
 	https://gobyexample.com/
+	https://github.com/GoesToEleven/go-programming
 
+Screen recording
+================
+https://obsproject.com/
 
 A Golang BDD Testing framework
 ==============================
