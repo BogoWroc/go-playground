@@ -1,4 +1,4 @@
-package kyu8_test
+package kyu8
 
 import (
 	. "github.com/onsi/ginkgo"
