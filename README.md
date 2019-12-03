@@ -8,6 +8,7 @@ Tips & Tricks
 	https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1
 	https://yourbasic.org/golang/
 	https://www.ardanlabs.com/all-posts/
+	https://blog.golang.org/context
 
 Effective go
 ============
