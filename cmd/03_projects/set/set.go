@@ -5,6 +5,6 @@ type Set interface {
 	Contains(e ...interface{}) bool
 	Length() int
 	Clean()
-	Iterator() chan interface{}
+	Iterator() <-chan interface{}
 	ToSlice() []interface{}
 }

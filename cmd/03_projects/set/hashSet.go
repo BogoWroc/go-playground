@@ -29,7 +29,7 @@ func (m *hashSet) Contains(i ...interface{}) bool {
 	return contains
 }
 
-func (m *hashSet) Iterator() chan interface{} {
+func (m *hashSet) Iterator() <-chan interface{} {
 	c := make(chan interface{})
 	go func() {
 		for k := range m.set {
