@@ -9,6 +9,9 @@ Tips & Tricks
 	https://yourbasic.org/golang/
 	https://www.ardanlabs.com/all-posts/
 	https://blog.golang.org/context
+	
+	https://blog.rubylearning.com/best-practices-for-a-new-go-developer-8660384302fc
+	https://github.com/go-martini/martini
 
 Effective go
 ============
@@ -22,9 +25,10 @@ PROJECT TEMPLATE
 ================
     https://github.com/ardanlabs/service
     
-Packaging
-=========
+Packaging/Modules
+=================
     https://github.com/ardanlabs/gotraining/tree/master/topics/go/design/packaging
+    https://github.com/golang/go/wiki/Modules#how-do-i-use-vendoring-with-modules-is-vendoring-going-away
 
 Testing and Mocking
 ===================
