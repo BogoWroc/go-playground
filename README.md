@@ -12,6 +12,8 @@ Tips & Tricks
 	
 	https://blog.rubylearning.com/best-practices-for-a-new-go-developer-8660384302fc
 	https://github.com/go-martini/martini
+	
+	http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/
 
 Effective go
 ============
