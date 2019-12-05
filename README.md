@@ -38,6 +38,22 @@ Testing and Mocking
 	BDD testing library
 	-------------------
 	https://github.com/onsi/ginkgo
+	
+	Commands
+	--------
+	Execute all tests: go test ./...
+	Execute tests in module: go test
+	Execute benchmark tests in module: go test -bench .
+	Execute code coverage in module: go test -cover
+	Generate reports form coverage:
+	    go test -coverprofile c.out
+	    
+	    or
+	     
+	    go tool cover -html=c.out 
+	    <next> 
+	    go tool cover -html=c.out -o c.html
+
 
 Error handling
 ==============
@@ -53,6 +69,20 @@ Examples
 Screen recording
 ================
 https://obsproject.com/
+
+Interesting libraries
+======================
+    Linter
+    ------
+    go get -u golang.org/x/lint/golint
+    
+    Local document generator
+    ------------------------
+    go get golang.org/x/tools/cmd/godoc
+ 
+    Starting local documentation server   
+    godoc -http=:8080
+
 
 A Golang BDD Testing framework
 ==============================
