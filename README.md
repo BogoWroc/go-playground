@@ -6,7 +6,10 @@ Tips & Tricks
 =============
 	https://peter.bourgon.org/go-best-practices-2016/#repository-structure
 	https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1
+	
 	https://yourbasic.org/golang/
+		https://yourbasic.org/golang/conversions/
+
 	https://www.ardanlabs.com/all-posts/
 	https://blog.golang.org/context
 	
@@ -31,6 +34,7 @@ Packaging/Modules
 =================
     https://github.com/ardanlabs/gotraining/tree/master/topics/go/design/packaging
     https://github.com/golang/go/wiki/Modules#how-do-i-use-vendoring-with-modules-is-vendoring-going-away
+    https://www.ardanlabs.com/blog/2019/10/modules-01-why-and-what.html
 
 Testing and Mocking
 ===================
@@ -84,6 +88,10 @@ Interesting libraries
  
     Starting local documentation server   
     godoc -http=:8080
+    
+    Go Env
+    ------
+    https://github.com/syndbg/goenv/blob/master/INSTALL.md
 
 
 A Golang BDD Testing framework
