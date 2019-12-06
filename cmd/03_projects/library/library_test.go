@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestBuildLibrary(t *testing.T) {
+func TestCreateLibrary(t *testing.T) {
 
 	tests := []struct {
 		name                         string
@@ -50,4 +50,49 @@ func TestBuildLibrary(t *testing.T) {
 			}
 		})
 	}
+}
+
+func TestRegisterBooksInLibrary(t *testing.T) {
+
+	tests := []struct {
+		name                string
+		library             Library
+		books               []Book
+		acceptedByLibrarian bool
+	}{
+		{
+			name:                "should not accept books when there are no bookcases in library",
+			library:             NewLibrary(0, 0, 0),
+			books:               giveBooks(2),
+			acceptedByLibrarian: false,
+		},
+		{
+			name:                "should not accept books when there is no place on bookshelves in any bookcase",
+			library:             NewLibrary(1, 2, 0),
+			books:               giveBooks(2),
+			acceptedByLibrarian: false,
+		},
+		{
+			name:                "should accept books when there is a capacity on bookshelves in any bookcase",
+			library:             NewLibrary(1, 2, 2),
+			books:               giveBooks(2),
+			acceptedByLibrarian: true,
+		},
+	}
+	for _, test := range tests {
+		t.Run(test.name, func(t *testing.T) {
+			if ok, _ := test.library.RegisterBooks(test.books); ok != test.acceptedByLibrarian {
+				t.Errorf("Expected %v, got %v", test.acceptedByLibrarian, ok)
+			}
+		})
+	}
+}
+
+func giveBooks(noOfBooks int) []Book {
+	books := make([]Book, 0)
+	for i := 0; i < noOfBooks; i++ {
+		books = append(books, Book{})
+	}
+
+	return books
 }
