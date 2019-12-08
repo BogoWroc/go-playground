@@ -1,6 +1,8 @@
 package library
 
-import "errors"
+import (
+	"errors"
+)
 
 type Author struct {
 	FirstName string
@@ -27,13 +29,26 @@ func (b Bookcase) isEnoughCapacityOnShelves(books []Book) bool {
 }
 
 func (b Bookcase) store(books []Book) {
-
+nextBook:
+	for _, book := range books {
+		for index := range b.bookshelves {
+			if b.bookshelves[index].capacity > 0 {
+				b.bookshelves[index].Add(book)
+				continue nextBook
+			}
+		}
+	}
 }
 
 type Bookshelf struct {
 	no       int
 	capacity int
 	books    []Book
+}
+
+func (b *Bookshelf) Add(book Book) {
+	b.books = append(b.books, book)
+	b.capacity -= 1
 }
 
 type Book struct {
@@ -43,6 +58,11 @@ type Book struct {
 
 type Library struct {
 	bookcases []Bookcase
+}
+
+type BookPosition struct {
+	bookcaseId  int
+	bookshelfId int
 }
 
 func (l Library) RegisterBooks(books []Book) (bool, error) {
@@ -61,6 +81,20 @@ func (l Library) findBookcaseFor(books []Book) (Bookcase, error) {
 		}
 	}
 	return Bookcase{}, errors.New("no free bookcase")
+}
+
+func (l Library) FindBook(book Book) BookPosition {
+	for _, bookcase := range l.bookcases {
+		for _, bookshelf := range bookcase.bookshelves {
+			for _, b := range bookshelf.books {
+				if b == book {
+					return BookPosition{bookcase.no, bookshelf.no}
+				}
+			}
+		}
+	}
+
+	return BookPosition{-1, -1}
 }
 
 // NewLibrary will create library with bookcases

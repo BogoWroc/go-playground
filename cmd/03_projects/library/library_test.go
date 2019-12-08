@@ -1,6 +1,7 @@
 package library
 
 import (
+	"strconv"
 	"testing"
 )
 
@@ -88,10 +89,43 @@ func TestRegisterBooksInLibrary(t *testing.T) {
 	}
 }
 
+func TestFindBook(t *testing.T) {
+
+	library := NewLibrary(1, 2, 2)
+	books := giveBooks(3)
+	if ok, err := library.RegisterBooks(books); !ok {
+		t.Error(err)
+	}
+
+	tests := []struct {
+		name         string
+		library      Library
+		book         Book
+		bookPosition BookPosition
+	}{
+		{
+			name:         "should return number of bookcase and bookshelf",
+			library:      library,
+			book:         books[2],
+			bookPosition: BookPosition{bookcaseId: 0, bookshelfId: 1},
+		},
+	}
+	for _, test := range tests {
+		t.Run(test.name, func(t *testing.T) {
+			if bookPosition := test.library.FindBook(test.book); bookPosition != test.bookPosition {
+				t.Errorf("Expected %v, got %v", test.bookPosition, bookPosition)
+			}
+		})
+	}
+}
+
 func giveBooks(noOfBooks int) []Book {
 	books := make([]Book, 0)
 	for i := 0; i < noOfBooks; i++ {
-		books = append(books, Book{})
+		books = append(books, Book{
+			title:  "Title: " + strconv.Itoa(i),
+			author: Author{FirstName: "Bob", LastName: "Kent"},
+		})
 	}
 
 	return books
