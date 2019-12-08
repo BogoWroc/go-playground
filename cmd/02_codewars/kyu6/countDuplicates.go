@@ -2,7 +2,7 @@ package kyu6
 
 import "strings"
 
-func duplicate_count(s string) int {
+func duplicateCount(s string) int {
 	//your code goes here
 
 	s = strings.ToLower(s)
