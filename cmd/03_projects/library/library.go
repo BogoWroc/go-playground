@@ -14,21 +14,7 @@ type Bookcase struct {
 	bookshelves []Bookshelf
 }
 
-func (b Bookcase) isEnoughCapacityOnShelves(books []Book) bool {
-
-	capacity := 0
-	for _, bookshelf := range b.bookshelves {
-		capacity += bookshelf.capacity
-	}
-
-	if capacity >= len(books) {
-		return true
-	}
-
-	return false
-}
-
-func (b Bookcase) store(books []Book) {
+func (b Bookcase) store(books ...Book) {
 nextBook:
 	for _, book := range books {
 		for index := range b.bookshelves {
@@ -40,6 +26,14 @@ nextBook:
 	}
 }
 
+func (b Bookcase) freeSlots() (capacity int) {
+	for _, bookshelf := range b.bookshelves {
+		capacity += bookshelf.capacity
+	}
+
+	return
+}
+
 type Bookshelf struct {
 	no       int
 	capacity int
@@ -48,7 +42,7 @@ type Bookshelf struct {
 
 func (b *Bookshelf) Add(book Book) {
 	b.books = append(b.books, book)
-	b.capacity -= 1
+	b.capacity--
 }
 
 type Book struct {
@@ -61,26 +55,38 @@ type Library struct {
 }
 
 type BookPosition struct {
-	bookcaseId  int
-	bookshelfId int
+	bookcaseID  int
+	bookshelfID int
 }
 
 func (l Library) RegisterBooks(books []Book) (bool, error) {
-	bookcase, err := l.findBookcaseFor(books)
-	if err != nil {
+	bookcases := l.findBookcasesFor(books)
+
+	if len(bookcases) == 0 {
 		return false, errors.New("there is no free bookcase")
 	}
-	bookcase.store(books)
+	for _, book := range books {
+		for _, bookcase := range bookcases {
+			if bookcase.freeSlots() > 0 {
+				bookcase.store(book)
+				break
+			}
+		}
+	}
 	return true, nil
 }
 
-func (l Library) findBookcaseFor(books []Book) (Bookcase, error) {
+func (l Library) findBookcasesFor(books []Book) []Bookcase {
+	requiredCapacity := len(books)
+	bookcases := make([]Bookcase, 0)
 	for _, bookcase := range l.bookcases {
-		if bookcase.isEnoughCapacityOnShelves(books) {
-			return bookcase, nil
+		freeSlots := bookcase.freeSlots()
+		if freeSlots != 0 && requiredCapacity > 0 {
+			bookcases = append(bookcases, bookcase)
 		}
+
 	}
-	return Bookcase{}, errors.New("no free bookcase")
+	return bookcases
 }
 
 func (l Library) FindBook(book Book) BookPosition {

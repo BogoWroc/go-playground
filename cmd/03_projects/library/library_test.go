@@ -79,6 +79,18 @@ func TestRegisterBooksInLibrary(t *testing.T) {
 			books:               giveBooks(2),
 			acceptedByLibrarian: true,
 		},
+		{
+			name:                "should accept books when there is a capacity on bookshelves in any bookcase - two bookshelves will be used",
+			library:             NewLibrary(1, 2, 2),
+			books:               giveBooks(3),
+			acceptedByLibrarian: true,
+		},
+		{
+			name:                "should accept books when there is a capacity on bookshelves in any bookcase - two bookcases will be used",
+			library:             NewLibrary(2, 2, 2),
+			books:               giveBooks(6),
+			acceptedByLibrarian: true,
+		},
 	}
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
@@ -91,8 +103,8 @@ func TestRegisterBooksInLibrary(t *testing.T) {
 
 func TestFindBook(t *testing.T) {
 
-	library := NewLibrary(1, 2, 2)
-	books := giveBooks(3)
+	library := NewLibrary(2, 2, 2)
+	books := giveBooks(6)
 	if ok, err := library.RegisterBooks(books); !ok {
 		t.Error(err)
 	}
@@ -104,10 +116,16 @@ func TestFindBook(t *testing.T) {
 		bookPosition BookPosition
 	}{
 		{
-			name:         "should return number of bookcase and bookshelf",
+			name:         "should return number of bookcase and bookshelf - first bookcase",
 			library:      library,
 			book:         books[2],
-			bookPosition: BookPosition{bookcaseId: 0, bookshelfId: 1},
+			bookPosition: BookPosition{bookcaseID: 0, bookshelfID: 1},
+		},
+		{
+			name:         "should return number of bookcase and bookshelf - second bookcase",
+			library:      library,
+			book:         books[5],
+			bookPosition: BookPosition{bookcaseID: 1, bookshelfID: 0},
 		},
 	}
 	for _, test := range tests {
