@@ -2,11 +2,11 @@ package main
 
 import "fmt"
 
-type animal interface {
+type Animal interface {
 	Name() string
 }
 
-func New(n string) animal {
+func New(n string) Animal {
 	return &dog{n}
 }
 

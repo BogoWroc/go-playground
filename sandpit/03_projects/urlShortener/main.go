@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/bogowroc/go-playground/cmd/03_projects/urlShortener/urlshort"
+	"github.com/bogowroc/go-playground/sandpit/03_projects/urlShortener/urlshort"
 	"net/http"
 )
 

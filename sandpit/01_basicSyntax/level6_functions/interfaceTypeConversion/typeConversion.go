@@ -2,8 +2,6 @@ package main
 
 import "fmt"
 
-type myType int
-
 type Writer interface {
 	Write(s string)
 }

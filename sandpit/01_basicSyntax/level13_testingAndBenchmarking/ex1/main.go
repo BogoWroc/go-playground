@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/bogowroc/go-playground/cmd/01_basicSyntax/level13_testingAndBenchmarking/ex1/dog"
+	"github.com/bogowroc/go-playground/sandpit/01_basicSyntax/level13_testingAndBenchmarking/ex1/dog"
 )
 
 type canine struct {

@@ -1,10 +1,9 @@
 package main
 
 import (
-	"capstone"
-	"chess"
-	"cmdline"
 	"fmt"
+	"github.com/bogowroc/go-playground/sandpit/99_clutter/capstone"
+	"github.com/bogowroc/go-playground/sandpit/99_clutter/cmdline"
 	"time"
 )
 
@@ -95,10 +94,6 @@ func terraformExercise() {
 	newPlanets := capstone.Terraform("New", planets...)
 	fmt.Println(newPlanets)
 
-}
-
-func chessExercise() {
-	chess.DisplayBoard()
 }
 
 func capstoneExercise() {
