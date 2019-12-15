@@ -17,11 +17,17 @@ Tips & Tricks
 	https://github.com/go-martini/martini
 	
 	http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/
+	
+	https://dmitri.shuralyov.com/idiomatic-go
 
 Effective go
 ============
 	https://golang.org/doc/effective_go.html
 
+Go Patterns
+===========
+    http://tmrts.com/go-patterns/
+    
 FAQ
 ===
 	https://golang.org/doc/faq
@@ -72,9 +78,15 @@ Examples
 	https://gobyexample.com/
 	https://github.com/GoesToEleven/go-programming
 
+Golang Web Server, and unit tests 
+=======================================================================
+    https://medium.com/myntra-engineering/my-journey-with-golang-web-services-4d922a8c9897
+    https://github.com/adnaan/learngo
+
+
 Screen recording
 ================
-https://obsproject.com/
+    https://obsproject.com/
 
 Interesting libraries
 ======================
