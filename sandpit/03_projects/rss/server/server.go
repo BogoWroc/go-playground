@@ -2,6 +2,7 @@ package server
 
 type Client interface {
 	ID() int
+	Notify(msg string)
 }
 
 type RssServer struct {
@@ -27,4 +28,10 @@ func (s RssServer) IsRegistered(c Client) bool {
 		}
 	}
 	return false
+}
+
+func (s RssServer) broadcast(msg string) {
+	for _, e := range s.clients {
+		e.Notify(msg)
+	}
 }

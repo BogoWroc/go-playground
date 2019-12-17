@@ -6,6 +6,18 @@ import (
 	. "github.com/onsi/gomega"
 )
 
+type fakeClient struct {
+	id  int
+	msg string
+}
+
+func (f *fakeClient) Notify(msg string) {
+	f.msg = msg
+}
+func (f fakeClient) ID() int {
+	return f.id
+}
+
 var _ = Describe("Hash tests", func() {
 
 	var server RssServer
@@ -49,4 +61,13 @@ var _ = Describe("Hash tests", func() {
 		Expect(len(server.clients)).To(Equal(1))
 	})
 
+	It("should be possible to send message to registered clients", func() {
+		c := &fakeClient{id: 5}
+
+		server.Register(c)
+		server.broadcast("Super news!")
+
+		Expect(c.msg).To(Equal("Super news!"))
+
+	})
 })
