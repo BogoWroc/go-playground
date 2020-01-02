@@ -2,6 +2,10 @@ How to Write Go Code
 ====================
 	https://golang.org/doc/code.html
 
+All in one
+==========
+https://dev.to/digitalocean/how-to-code-in-go-32p0
+
 Tips & Tricks
 =============
 	https://peter.bourgon.org/go-best-practices-2016/#repository-structure
