@@ -6,6 +6,10 @@ All in one
 ==========
 https://dev.to/digitalocean/how-to-code-in-go-32p0
 
+Go in  5 minutes
+================
+https://learnxinyminutes.com/docs/go/
+
 Tips & Tricks
 =============
 	https://peter.bourgon.org/go-best-practices-2016/#repository-structure
