@@ -32,6 +32,11 @@ Go Patterns
 ===========
     http://tmrts.com/go-patterns/
     
+Go Build
+========
+https://www.digitalocean.com/community/tutorials/how-to-build-and-install-go-programs
+https://www.digitalocean.com/community/tutorials/building-go-applications-for-different-operating-systems-and-architectures
+    
 FAQ
 ===
 	https://golang.org/doc/faq
