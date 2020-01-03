@@ -23,6 +23,7 @@ Tips & Tricks
 	http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/
 	
 	https://dmitri.shuralyov.com/idiomatic-go
+	https://codeburst.io/why-goroutines-are-not-lightweight-threads-7c460c1f155f
 
 Effective go
 ============
