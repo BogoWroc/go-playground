@@ -28,36 +28,29 @@ var _ = Describe("lift tests", func() {
 		//l.(*lift).display = &displayMock
 	})
 
-	It("should do not report that max weight was exceed when lift is empty", func() {
+	It("should do not report that max weight was exceeded when lift is empty", func() {
 
-		i := l.IsMaxWeightExceed()
-
-		Expect(i).To(BeFalse())
+		Expect(displayMock.message).To(Equal(""))
 
 	})
 
-	It("should do not report that max weight was exceed", func() {
+	It("should do not report that max weight was exceeded", func() {
 
 		p1 := Person{Weight: 90}
 		p2 := Person{Weight: 40}
 		l.Enter(p1, p2)
 
-		i := l.IsMaxWeightExceed()
-
-		Expect(i).To(BeFalse())
+		Expect(displayMock.message).To(Equal(""))
 
 	})
 
-	It("should report that max weight exceed", func() {
+	It("should report that max weight exceeded", func() {
 
 		p1 := Person{Weight: 90}
 		p2 := Person{Weight: 80}
 		l.Enter(p1, p2)
 
-		i := l.IsMaxWeightExceed()
-
-		Expect(i).To(BeTrue())
-		Expect(displayMock.message).To(Equal("Max weight exceed"))
+		Expect(displayMock.message).To(Equal("Max weight exceeded"))
 	})
 
 })

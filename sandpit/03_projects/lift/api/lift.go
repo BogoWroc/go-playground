@@ -5,7 +5,6 @@ type Person struct {
 }
 
 type Lift interface {
-	IsMaxWeightExceed() bool
 	Enter(p ...Person)
 }
 

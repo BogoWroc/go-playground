@@ -18,11 +18,13 @@ func New(maxWeight int, display Display) Lift {
 
 func (l *lift) Enter(p ...Person) {
 	l.persons = append(l.persons, p...)
+	if l.isMaxWeightExceed() {
+		l.display.Display("Max weight exceeded")
+	}
 }
 
-func (l lift) IsMaxWeightExceed() bool {
+func (l lift) isMaxWeightExceed() bool {
 	if l.calculatePersonsWeight() > l.maxWeight {
-		l.display.Display("Max weight exceed")
 		return true
 	}
 
