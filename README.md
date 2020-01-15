@@ -96,6 +96,10 @@ Examples
 	https://gobyexample.com/
 	https://github.com/GoesToEleven/go-programming
 
+Real project example
+====================
+https://medium.com/gdg-vit/clean-architecture-the-right-way-d83b81ecac6
+
 Golang Web Server, and unit tests 
 =======================================================================
     https://medium.com/myntra-engineering/my-journey-with-golang-web-services-4d922a8c9897
