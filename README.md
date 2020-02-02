@@ -2,6 +2,14 @@ How to Write Go Code
 ====================
 	https://golang.org/doc/code.html
 
+All in one
+==========
+https://dev.to/digitalocean/how-to-code-in-go-32p0
+
+Go in  5 minutes
+================
+https://learnxinyminutes.com/docs/go/
+
 Tips & Tricks
 =============
 	https://peter.bourgon.org/go-best-practices-2016/#repository-structure
@@ -19,6 +27,7 @@ Tips & Tricks
 	http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/
 	
 	https://dmitri.shuralyov.com/idiomatic-go
+	https://codeburst.io/why-goroutines-are-not-lightweight-threads-7c460c1f155f
 
 Effective go
 ============
@@ -27,6 +36,15 @@ Effective go
 Go Patterns
 ===========
     http://tmrts.com/go-patterns/
+    
+Go Build
+========
+https://www.digitalocean.com/community/tutorials/how-to-build-and-install-go-programs
+https://www.digitalocean.com/community/tutorials/building-go-applications-for-different-operating-systems-and-architectures
+
+Read or Write JSON in Go
+========================
+https://www.digitalocean.com/community/tutorials/how-to-use-struct-tags-in-go
     
 FAQ
 ===
@@ -77,6 +95,10 @@ Examples
 ========
 	https://gobyexample.com/
 	https://github.com/GoesToEleven/go-programming
+
+Real project example
+====================
+https://medium.com/gdg-vit/clean-architecture-the-right-way-d83b81ecac6
 
 Golang Web Server, and unit tests 
 =======================================================================

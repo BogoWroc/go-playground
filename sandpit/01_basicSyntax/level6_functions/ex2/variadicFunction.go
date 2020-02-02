@@ -4,11 +4,11 @@ import "fmt"
 
 func main() {
 	data := []int{1, 2, 3}
-	fmt.Println(foo(data...))
+	fmt.Println(foo(data...)) //exploding arguments
 	fmt.Println(bar(foo, data))
 }
 
-func foo(e ...int) (sum int) {
+func foo(e ...int) (sum int) { // variadic parameter
 	for _, v := range e {
 		sum += v
 	}
